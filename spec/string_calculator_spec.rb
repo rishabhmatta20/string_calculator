@@ -6,5 +6,9 @@ RSpec.describe StringCalculator do
     it 'is defined' do
       expect(StringCalculator).to respond_to(:add)
     end
+
+    it 'returns 0 for an empty string' do
+      expect(StringCalculator.add("")).to eq(0)
+    end
   end
 end
